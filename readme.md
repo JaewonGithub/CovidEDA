@@ -1,17 +1,18 @@
 # Introduction
-**Welcome to my COVID-19 Data Exploration project!** 
-<br>
-<br>In this project, I delve into the extensive realm of COVID-19 data to gain insights, uncover trends, and visualize patterns related to the global pandemic caused by the novel coronavirus. Using SQL query for exploratory data analysis and Python for data visualization, I aim to provide a comprehensive understanding of the pandemic's on various geographical regions. Join me on this journey as we navigate through data to shed light on the multifaceted aspects of the COVID-19 pandemic. 
+### **Welcome to my COVID-19 Data Exploration project!** 
+In this project, I delve into the extensive realm of COVID-19 data to gain insights, uncover trends, and visualize patterns related to the global pandemic caused by the novel coronavirus. Using SQL query for exploratory data analysis and Python for data visualization, I aim to provide a comprehensive understanding of the pandemic's on various geographical regions. Join me on this journey as we navigate through data to shed light on the multifaceted aspects of the COVID-19 pandemic. 
 
 🔍 Full SQL queries? Check them out here: [SQL Codes](https://github.com/JaewonGithub/CovidEDA/blob/main/project_sql/Q1~Q5_SQL_code.sql)<br> 
 🔍 Full Visualization Python codes? They are here: [Python Codes](/project_python/)
-
+<br>
+<br>
+<br>
 # Background
 The motivation to explore the dataset on COVID-19 is deeply rooted in the profound impact this global pandemic has had on all of us around the world, including myself. By immersing myself in the data and leveraging EDA techniques, I seek to uncover hidden trends, patterns, and correlations that can provide valuable insights into the dynamics of the pandemic. These insights not only inform my own understanding but also empower me to contribute meaningfully to the ongoing discourse surrounding COVID-19. Ultimately, my goal is to use data-driven insights to inform others about the significance of COVID-19 and contribute to the collective effort of addressing the challenges posed by it on a global scale.
 
 Data hails from [Our World in Data](https://ourworldindata.org/covid-deaths) - contains COVID-19 information from 2020-01-01 to 2021-04-30. 
 
-### The Questions answered throughout this project using SQL queries:
+### The Questions answered throughout this project:
 1. What were the cumulative global counts for COVID-19 infections and deaths as of April 30, 2021? 
 
 2. How did the monthly counts of COVID-19 infections and deaths vary over time specifically for the United States?
@@ -21,7 +22,9 @@ Data hails from [Our World in Data](https://ourworldindata.org/covid-deaths) - c
 4. Which countries exhibited the highest infection rates within each continent?
 
 5. What is the correlation between the infection rate and other relevant variables, such as GDP per capita , ages, and population density?
-
+<br>
+<br>
+<br>
 # Utilized Tools
 For this project, following tools were used:
 
@@ -34,14 +37,12 @@ For this project, following tools were used:
 4. **Git:** Employed Git for version control and project management, facilitating the tracking of project progress.
 
 5. **Visual Studio Code:** Utilized Visual Studio Code as the Integrated Development Environment (IDE), utilizing its terminal for executing Python scripts and extensions for SQL queries, enhancing productivity throughout the data exploration and analysis process.
-
-# Analysis
-<<<<<<< HEAD
-=======
 <br>
->>>>>>> e42dea0d70409166afe7c0f7ed5094270351e6db
+<br>
+<br>
+# Analysis
 
-## 1. Global significance of COVID-19
+## 1. Global Significance Of COVID-19
 To determine the global infection count and death count of COVID-19 as of April 30th, 2021, the dataset was filtered to include only the last date available. Rows with missing location (country) were excluded from the analysis to ensure accurate and meaningful insights into the global situation of COVID-19. 
 
 ```sql
@@ -51,7 +52,8 @@ SELECT
 FROM (
 	SELECT *
 	FROM covid_deaths
-	WHERE date = '2021-04-30' AND continent IS NOT NULL AND location IS NOT NULL
+	WHERE date = '2021-04-30' AND continent IS NOT NULL AND
+    location IS NOT NULL
 );
 ```
 | global_infection_count | global_death_count |
@@ -63,14 +65,15 @@ FROM (
 
 - **Total Death** - With a death count surpassing 3 million, COVID-19's impact extends significantly to the fatality aspect, emphasizing the profound toll the pandemic has taken on human lives globally.
 
-## 2. Looking into United States 
+## 2. Looking Into United States 
 To delve deeper into the first question, I have narrowed my focus to the United States, which is my primary area of interest. Additionally, I have generated monthly reports to enhance the informativeness of visualizations.
 ```sql
 SELECT 
 	date,
 	total_cases AS infection_count, 
 	COALESCE(total_deaths , 0) AS death_count
-FROM covid_deaths
+FROM 
+    covid_deaths
 WHERE
 	location = 'United States' AND EXTRACT(DAY FROM date) = '1';
 ```
@@ -96,6 +99,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 data = pd.read_csv("C:\Users\wodnj\Desktop\Q2output.csv")
+
 dates = [item["date"] for item in data]
 infection_counts = [item["infection_count"] for item in data]
 death_counts = [item["death_count"] for item in data]
@@ -123,7 +127,7 @@ plt.show()
 ```
 ![Image1](assets/Q2_image1.png) 
 ### Breakdown:
-- **Trend Analysis:** Observing the trend from the line chart, before July of 2020, the graph depicting infection counts shows a relatively flat slope, indicating a slower spread of COVID-19 during that period. However, starting from August 2020, there is a noticeable increase in the slope of curve, indicating a more rapid spread of the virus. This trend intensifies significantly from November 2020 to February 2021, where the infection count nearly triples within this period. The decreasing slope observed from February 2021 onward could potentially be attributed to the release and administration of better vaccinations and booster shots, which likely contributed to reducing the rate of new infections. 
+- **Trend Analysis:** Observing the trend from the line chart, before July of 2020, the graph depicting infection counts shows a relatively flat slope, indicating a slower spread of COVID-19 during that period. However, starting from August 2020, there is a noticeable increase in the slope of curve, indicating a more rapid spread of the virus. This trend intensifies significantly from November 2020 to February 2021, where the infection count nearly triples within this period. The decreasing slope observed from February 2021 onward could potentially be attributed to the release and administration of better vaccinations, which likely contributed to reducing the rate of new infections. 
 <br></br>
 
 ![Image2](assets/Q2_image2.png)
@@ -133,7 +137,7 @@ plt.show()
 - **High Correlation with Infection Count:** Analysis of the two graphs reveal a strong positive correlation between infection and death counts in the United States at various time points. The rate of increase in death counts mirrors the trend of infection count escalation, indicating a direct relationship between the spread of the virus and resultant fatalities. This correlation underscores the critical importance of controlling and mitigating the spread of COVID-19 infections to reduce associated mortality rates effectively.
 
 
-## 3. Highest infection rate countries 
+## 3. Highest Infection Rate Countries 
 To identify the 10 countries with the highest infection rates and their corresponding death rates, following query was used to calculate the rates in percentage.
 ```sql
 SELECT 
@@ -198,7 +202,7 @@ plt.show()
 
 - **High Death Rate Countries:** San Marino, United States, Slovenia, Czechia stand out for their unusually high death rates when infected with COVID-19, nearing 1.8%. This observation underscores the complexity of COVID-19 outcomes and highlights the importance of understanding and addressing factors contributing to higher mortality rates in specific regions or populations.
 
-## 4. COVID-19 for each continent
+## 4. COVID-19 For Each Continent
 ```sql
 WITH ranking AS (
 	SELECT 
@@ -269,7 +273,7 @@ plt.show()
 
 ### Breakdown: 
 
-- **Prevalency in Europe:** The unexpectedly large infection rate in Europe and the unexpectedly low infection rate in Africa highlight that the wealth of a country may not have a significant correlation with infection rates.
+- **COVID-19 Prevalency in Europe:** The unexpectedly large infection rate in Europe and the unexpectedly low infection rate in Africa highlight that the wealth of a country may not have a significant correlation with infection rates.
 
 - **Insights on Oceania:** Oceania's low infection rate could be attributed to its relatively low total population. However, despite this, the death rate in Oceania does not significantly differ from other continents, indicating other potential factors at play.
 
@@ -311,13 +315,16 @@ WHERE NOT
 | Population Density              | 0.031 |
 
 ### Breakdown:
-- **GDP per capita:** The positive correlation value of 0.315 indicates a moderate positive association between a country's GDP per capita and its infection rate from COVID-19. This suggests that wealthier nations may experience slightly higher infection rates.
+- **GDP Per Capita:** 
+The positive correlation value of 0.315 indicates a moderate positive association between a country's GDP per capita and its infection rate from COVID-19. This suggests that wealthier nations may experience slightly higher infection rates.
 
-- **Age 65+ population:** With a correlation value of 0.303, there appears to be a moderate positive correlation between the percentage of the population aged 65 and above and the infection rate. Countries with a higher proportion of older individuals tend to have slightly higher infection rates, highlighting potential vulnerabilities in older age groups.
+- **Age 65+ Population:** 
+With a correlation value of 0.303, there appears to be a moderate positive correlation between the percentage of the population aged 65 and above and the infection rate. Countries with a higher proportion of older individuals tend to have slightly higher infection rates, highlighting potential vulnerabilities in older age groups.
 
-- **Population density:** The correlation value of 0.031 suggests that there is almost no correlation between population density and the infection rate of COVID-19. This implies that factors other than population density play a more significant role in determining the spread and impact of the virus.
+- **Population Density:** 
+The correlation value of 0.031 suggests that there is almost no correlation between population density and the infection rate of COVID-19. This implies that factors other than population density play a more significant role in determining the spread and impact of the virus.
 
-- **Possibility of flaws:** This dataset is limited to reported countries which may not be very consistent with entire population dataset. The absence of data from certain countries can skew the correlation analysis. 
+- **Possibility Of Flaws:** This dataset is limited to reported countries which may not be very consistent with entire population dataset. The absence of data from certain countries can skew the correlation analysis. 
 
 
 
