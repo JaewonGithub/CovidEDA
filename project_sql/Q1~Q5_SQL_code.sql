@@ -1,4 +1,4 @@
--- Q1. What was the total infection and death count by 2021-04-30?
+-- Q1. What was the total infection and death count of COVID by 2021-04-30?
 
 SELECT 
 	SUM(total_cases) AS global_infection_count,
@@ -9,7 +9,7 @@ FROM (
 	WHERE date = '2021-04-30' AND continent IS NOT NULL AND location IS NOT NULL
 );
 
--- Q2. What was the total infection and death count for United States ?
+-- Q2. What was the monthly total infection and death count for United States?
 
 SELECT 
 	date,
@@ -23,6 +23,7 @@ WHERE
 
 SELECT 
 	location,
+	population,
 	MAX(total_cases) AS total_cases, 
 	ROUND(MAX((total_cases/population) * 100),3) AS infection_percent,
 	MAX(total_deaths) AS total_deaths,
@@ -35,7 +36,7 @@ WHERE NOT
 	 total_deaths IS NULL OR
 	 population IS NULL)
 GROUP BY 
-	location
+	location , population
 ORDER BY 
 	infection_percent DESC
 LIMIT 10;
@@ -61,7 +62,8 @@ SELECT
 	location, 
 	ROUND((total_cases / population)*100,3) AS infection_percent,
 	ROUND((total_deaths / total_cases)*100,3) AS death_percent
-FROM ranking
+FROM 
+	ranking
 WHERE NOT(
 	 continent IS NULL OR
 	 total_cases IS NULL OR 
