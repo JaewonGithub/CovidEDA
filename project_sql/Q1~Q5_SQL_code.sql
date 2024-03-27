@@ -27,7 +27,7 @@ SELECT
 	MAX(total_cases) AS total_cases, 
 	ROUND(MAX((total_cases/population) * 100),3) AS infection_percent,
 	MAX(total_deaths) AS total_deaths,
-	ROUND(MAX((total_deaths/total_cases)*100),3) AS death_percent
+	ROUND(MAX(total_deaths)/MAX(total_cases) * 100 , 3) AS death_percent
 FROM 
 	covid_deaths
 WHERE NOT

@@ -9,7 +9,7 @@ data = [
     {"continent": "South America", "location": "Brazil", "infection_percent": 6.896, "death_percent": 2.754}
 ]
 
-continents = [item["continent"] for item in data]
+continents = [item["continent"] for item in data] 
 locations = [item["location"] for item in data]
 infection_percentages = [item["infection_percent"] for item in data]
 death_percentages = [item["death_percent"] for item in data]
