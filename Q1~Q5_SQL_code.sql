@@ -12,6 +12,7 @@ FROM (
 -- Q2. What was the total infection and death count for United States ?
 
 SELECT 
+	date,
 	total_cases AS infection_count, 
 	COALESCE(total_deaths , 0) AS death_count
 FROM covid_deaths
@@ -67,7 +68,7 @@ WHERE NOT(
 	 total_deaths IS NULL OR
 	 population IS NULL) AND row_number = 1;
 
--- Q5. What is the correlation between infection rate and other factors?
+-- Q5. What is the correlation between infection rate and other variables?
 
 --Added id column to both tables for convenience of joining.
 ALTER TABLE covid_deaths ADD id SERIAL;
