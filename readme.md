@@ -135,6 +135,8 @@ plt.show()
 - **Trend Analysis:** Observing the trend from the line chart, before July of 2020, the graph depicting infection counts shows a relatively flat slope, indicating a slower spread of COVID-19 during that period. However, starting from August 2020, there is a noticeable increase in the slope of curve, indicating a more rapid spread of the virus. This trend intensifies significantly from November 2020 to February 2021, where the infection count nearly triples within this period. The decreasing slope observed from February 2021 onward could potentially be attributed to the release and administration of better vaccinations, which likely contributed to reducing the rate of new infections. 
 <br></br>
 
+
+
 ![Image2](assets/Q2_image2.png)
 ### Breakdown:
 - **Sudden Increase in April 2020:** The notable spike in infection counts observed in April 2020 may be attributed to the absence of widely available vaccinations for COVID-19 during that period. This lack of preventive measures likely contributed to the rapid spread of the virus within the population. Although the infection rate maintains a relatively consistent slope until November 2020, the death count experiences another sudden surge from that point onward. This could indicate exposure to new variants of COVID-19 for which the population was not adequately prepared, leading to increased fatalities.
