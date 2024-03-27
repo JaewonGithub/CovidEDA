@@ -36,8 +36,10 @@ For this project, following tools were used:
 5. **Visual Studio Code:** Utilized Visual Studio Code as the Integrated Development Environment (IDE), utilizing its terminal for executing Python scripts and extensions for SQL queries, enhancing productivity throughout the data exploration and analysis process.
 
 # Analysis
- **Each query for this project aimed at drawing insights from COVID-19 data, here's the approach:**
+<<<<<<< HEAD
+=======
 <br>
+>>>>>>> e42dea0d70409166afe7c0f7ed5094270351e6db
 
 ## 1. Global significance of COVID-19
 To determine the global infection count and death count of COVID-19 as of April 30th, 2021, the dataset was filtered to include only the last date available. Rows with missing location (country) were excluded from the analysis to ensure accurate and meaningful insights into the global situation of COVID-19. 
@@ -302,57 +304,20 @@ WHERE NOT
 	aged_65_older IS NULL AND 
 	population_density IS NULL)
 ```
-| Skill ID | Skills       | Demand Count | Average Salary | Ratings | 
-|----------|--------------|--------------|----------------|---------|
-| 1        | python       | 5616         | $141,976       | Tier 1  |
-| 0        | sql          | 4175         | $142,319       | Tier 1  |
-| 5        | r            | 3177         | $138,714       | Tier 3  |
-| 182      | tableau      | 1607         | $134,753       | Tier 3  |
-| 76       | aws          | 1349         | $141,748       | Tier 1  |
-| 92       | spark        | 1291         | $149,662       | Tier 1  |
-| 99       | tensorflow   | 880          | $146,920       | Tier 2  |
-| 74       | azure        | 823          | $135,560       | Tier 3  |
-| 101      | pytorch      | 772          | $149,663       | Tier 2  |
-| 97       | hadoop       | 767          | $141,181       | Tier 2  |
-| 181      | excel        | 763          | $127,406       | Tier 3  |
-| 186      | sas          | 762          | $125,255       | Tier 3  |
-| 7        | sas          | 762          | $125,255       | Tier 3  |
-| 4        | java         | 701          | $135,183       | Tier 3  |
-| 93       | pandas       | 639          | $142,440       | Tier 2  |
-| 183      | power bi     | 592          | $120,971       | Tier 3  |
-| 3        | scala        | 531          | $146,704       | Tier 2  |
-| 210      | git          | 520          | $131,711       | Tier 3  |
-| 106      | scikit-learn | 513          | $145,940       | Tier 2  |
-| 8        | go           | 460          | $153,973       | Tier 3  |
+| Correlation with Infection Rate | Value |
+|---------------------------------|-------|
+| GDP                             | 0.315 |
+| Age 65+ Population              | 0.303 |
+| Population Density              | 0.031 |
 
-Here's the breakdown of optimal skills to learn as a Data Scientist:
+### Breakdown:
+- **GDP per capita:** The positive correlation value of 0.315 indicates a moderate positive association between a country's GDP per capita and its infection rate from COVID-19. This suggests that wealthier nations may experience slightly higher infection rates.
 
-- **Tier 1 Skills (High Demand, High Salary):** Python and SQL Widely demanded (5616 and 4175 job postings) with competitive salaries ($141,976 and $142,319). AWS and Spark offer substantial job opportunities (1349 and 1291 job postings) with attractive salaries ($141,748 and $149,662).
-- **Tier 2 Skills (Moderate Demand, Competitive Salary):** TensorFlow, PyTorch, Hadoop, Scala, Pandas, and Scikit-Learn: Good demand (ranging from 513 to 880 job postings) with competitive salaries ($120,971 to $146,920).
-- **Tier 3 Skills (Steady Demand, Varied Salary):** R, Tableau, Azure, Java, Excel, SAS, Power BI, Git, and Go: Exhibit steady demand (ranging from 460 to 3177 job postings) with varying salaries ($120,971 to $153,973). Specific roles within data science, analytics, and software development benefit from these skills.
+- **Age 65+ population:** With a correlation value of 0.303, there appears to be a moderate positive correlation between the percentage of the population aged 65 and above and the infection rate. Countries with a higher proportion of older individuals tend to have slightly higher infection rates, highlighting potential vulnerabilities in older age groups.
 
-# What I learned
-Throughout this journey, I have significantly enhanced my SQL proficiency with advanced capabilities:
+- **Population density:** The correlation value of 0.031 suggests that there is almost no correlation between population density and the infection rate of COVID-19. This implies that factors other than population density play a more significant role in determining the spread and impact of the virus.
 
-- 🧩 **Advanced Query Construction:** Mastered the intricacies of SQL by seamlessly merging tables and employing WITH clauses for sophisticated temporary table operations.
+- **Possibility of flaws:** This dataset is limited to reported countries which may not be very consistent with entire population dataset. The absence of data from certain countries can skew the correlation analysis. 
 
-- 📊 **Data Aggregation Mastery:** Developed expertise in data summarization techniques using GROUP BY alongside aggregate functions like COUNT() , ROUND() and AVG(), enabling comprehensive data analysis.
 
-- 💡 **Analytical Expertise:** Enhanced my problem-solving skills by translating complex questions into actionable SQL queries, generating valuable insights for decision-making processes.
 
-# Conclusions
-### Insights
-
-1. **Top-Paying Data Scientist Jobs:** The highest-paying jobs for data scientists offer a wide range of salaries, the highest at $550,000. Furthermore, These top paid positions also offers remote work flexibility, reflecting the increasing global acceptance of remote work in the data science industry and providing professionals with more career flexibility.
-***
-2. **Skills for Top Paid Jobs:** The top-paid data scientist roles emphasize a broad range of skills including SQL, Python, Java, Scala, AWS, and Azure, highlighting the demand for diverse data manipulation and programming proficiencies. Additionally, advanced technologies like TensorFlow, PyTorch, Spark, Hadoop, and machine learning expertise are crucial for roles commanding higher salaries, underscoring the significance of big data analytics and distributed computing capabilities in the industry.
-***
-3. **Most In-Demand Skills:** Python and SQL remain dominant in the data science landscape due to their versatility and essential roles in data handling and analytics. Skills in R, SAS, Tableau, AWS, Azure, TensorFlow, PyTorch, and Spark are increasingly sought after, highlighting the industry's focus on data modeling, visualization, cloud-based analytics, and AI/ML technologies. This trend underscores the need for professionals with a diverse skill set spanning traditional data handling, advanced analytics, and emerging technologies for scalable data solutions and informed decision-making.
-***
-4. **Skills with Higher Salaries:** Specialized skills such as Neo4j and Solidity command competitive salaries due to their niche expertise in graph databases and blockchain development, respectively. Additionally, skills in cloud computing (Airtable, Redhat) and AI/ML (Watson) sectors show higher average salaries, indicating the significant impact of these technologies across industries.
-***
-5. **Optimal Skills for Job Market Value:** Python, SQL, AWS, and Spark remain top-tier skills due to their widespread use and high salary potential.
-Machine learning frameworks like TensorFlow, PyTorch, and Scikit-Learn show promising demand and salary prospects. Visualization tools such as Tableau, Azure, and Power BI have moderate demand and are essential for data visualization and cloud-related tasks.
-
-### Closing Thoughts
-Engaging in this project has not only improved my SQL proficiency but also offered invaluable insights into the data scientist job landscape. The derived insights are instrumental in guiding the prioritization of skill enhancement and job search strategies. Aspiring data scientists can optimize their competitiveness in the job market by emphasizing the acquisition of in-demand, high-paying skills. This endeavor underscores the significance of ongoing learning and adaptability to stay on top of evolving trends in the data science domain.
