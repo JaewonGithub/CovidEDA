@@ -10,7 +10,7 @@ The motivation to explore the dataset on COVID-19 is deeply rooted in the profou
 
 Data hails from [Our World in Data](https://ourworldindata.org/covid-deaths) - contains COVID-19 information from 2020-01-01 to 2021-04-30. 
 
-### The Questions answered through SQL queries:
+### The Questions answered throughout this project using SQL queries:
 1. What were the cumulative global counts for COVID-19 infections and deaths as of April 30, 2021? 
 
 2. How did the monthly counts of COVID-19 infections and deaths vary over time specifically for the United States?
