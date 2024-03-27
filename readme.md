@@ -1,5 +1,6 @@
 # Introduction
 **Welcome to my COVID-19 Data Exploration project!** 
+<br>
 <br>In this project, I delve into the extensive realm of COVID-19 data to gain insights, uncover trends, and visualize patterns related to the global pandemic caused by the novel coronavirus. Using SQL query for exploratory data analysis and Python for data visualization, I aim to provide a comprehensive understanding of the pandemic's on various geographical regions. Join me on this journey as we navigate through data to shed light on the multifaceted aspects of the COVID-19 pandemic. 
 
 🔍 Full SQL queries? Check them out here: [SQL Codes](https://github.com/JaewonGithub/CovidEDA/blob/main/project_sql/Q1~Q5_SQL_code.sql)<br> 
