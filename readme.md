@@ -33,7 +33,6 @@ For this project, following tools were used:
 5. **Visual Studio Code:** Utilized Visual Studio Code as the Integrated Development Environment (IDE), utilizing its terminal for executing Python scripts and extensions for SQL queries, enhancing productivity throughout the data exploration and analysis process.
 
 # Analysis
- **Each query for this project aimed at drawing insights from COVID-19 data, here's the approach:**
 <br>
 
 ### 1. Global significance of COVID-19
