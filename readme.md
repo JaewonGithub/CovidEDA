@@ -8,8 +8,7 @@
 # Background
 The motivation to explore the dataset on COVID-19 is deeply rooted in the profound impact this global pandemic has had on all of us around the world, including myself. By immersing myself in the data and leveraging EDA techniques, I seek to uncover hidden trends, patterns, and correlations that can provide valuable insights into the dynamics of the pandemic. These insights not only inform my own understanding but also empower me to contribute meaningfully to the ongoing discourse surrounding COVID-19. Ultimately, my goal is to use data-driven insights to inform others about the significance of COVID-19 and contribute to the collective effort of addressing the challenges posed by it on a global scale.
 
-Data hails from [Our World in Data](https://ourworldindata.org/covid-deaths).
-<br>The data contains COVID-19 information from 2020-01-01 to 2021-04-30. 
+Data hails from [Our World in Data](https://ourworldindata.org/covid-deaths) - contains COVID-19 information from 2020-01-01 to 2021-04-30. 
 
 ### The Questions answered through SQL queries:
 1. What were the cumulative global counts for COVID-19 infections and deaths as of April 30, 2021? 
