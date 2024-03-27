@@ -25,6 +25,7 @@ Data hails from [Our World in Data](https://ourworldindata.org/covid-deaths) - c
 <br>
 <br>
 <br>
+
 # Utilized Tools
 For this project, following tools were used:
 
@@ -40,6 +41,7 @@ For this project, following tools were used:
 <br>
 <br>
 <br>
+
 # Analysis
 
 ## 1. Global Significance Of COVID-19
