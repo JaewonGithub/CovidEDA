@@ -6,7 +6,8 @@ In this project, I delve into the extensive realm of COVID-19 data to gain insig
 🔍 Full Visualization Python codes? They are here: [Python Codes](/project_python/)
 <br>
 <br>
-<br>
+
+
 # Background
 The motivation to explore the dataset on COVID-19 is deeply rooted in the profound impact this global pandemic has had on all of us around the world, including myself. By immersing myself in the data and leveraging EDA techniques, I seek to uncover hidden trends, patterns, and correlations that can provide valuable insights into the dynamics of the pandemic. These insights not only inform my own understanding but also empower me to contribute meaningfully to the ongoing discourse surrounding COVID-19. Ultimately, my goal is to use data-driven insights to inform others about the significance of COVID-19 and contribute to the collective effort of addressing the challenges posed by it on a global scale.
 
@@ -24,7 +25,7 @@ Data hails from [Our World in Data](https://ourworldindata.org/covid-deaths) - c
 5. What is the correlation between the infection rate and other relevant variables, such as GDP per capita , ages, and population density?
 <br>
 <br>
-<br>
+
 
 # Utilized Tools
 For this project, following tools were used:
@@ -40,7 +41,7 @@ For this project, following tools were used:
 5. **Visual Studio Code:** Utilized Visual Studio Code as the Integrated Development Environment (IDE), utilizing its terminal for executing Python scripts and extensions for SQL queries, enhancing productivity throughout the data exploration and analysis process.
 <br>
 <br>
-<br>
+
 
 # Analysis
 
@@ -66,6 +67,8 @@ FROM (
 - **Total Infection** - The staggering global infection count underscores the profound impact of COVID-19 on a worldwide scale, highlighting its widespread reach and severity.
 
 - **Total Death** - With a death count surpassing 3 million, COVID-19's impact extends significantly to the fatality aspect, emphasizing the profound toll the pandemic has taken on human lives globally.
+
+<br>
 
 ## 2. Looking Into United States 
 To delve deeper into the first question, I have narrowed my focus to the United States, which is my primary area of interest. Additionally, I have generated monthly reports to enhance the informativeness of visualizations.
@@ -138,6 +141,7 @@ plt.show()
 
 - **High Correlation with Infection Count:** Analysis of the two graphs reveal a strong positive correlation between infection and death counts in the United States at various time points. The rate of increase in death counts mirrors the trend of infection count escalation, indicating a direct relationship between the spread of the virus and resultant fatalities. This correlation underscores the critical importance of controlling and mitigating the spread of COVID-19 infections to reduce associated mortality rates effectively.
 
+<br>
 
 ## 3. Highest Infection Rate Countries 
 To identify the 10 countries with the highest infection rates and their corresponding death rates, following query was used to calculate the rates in percentage.
@@ -203,6 +207,8 @@ plt.show()
 - **Lack of Correlation:** Analysis based on the histogram reveals a notable lack of correlation between infection rates and death rates in the countries. Despite having high infection rates, these countries exhibit varying death rates, indicating that the severity of COVID-19 outcomes may not be solely determined by the infection rate. This suggests that other factors such as healthcare capacity, treatment protocols, and demographics may significantly influence mortality rates.
 
 - **High Death Rate Countries:** San Marino, United States, Slovenia, Czechia stand out for their unusually high death rates when infected with COVID-19, nearing 1.8%. This observation underscores the complexity of COVID-19 outcomes and highlights the importance of understanding and addressing factors contributing to higher mortality rates in specific regions or populations.
+
+<br>
 
 ## 4. COVID-19 For Each Continent
 ```sql
@@ -280,6 +286,8 @@ plt.show()
 - **Insights on Oceania:** Oceania's low infection rate could be attributed to its relatively low total population. However, despite this, the death rate in Oceania does not significantly differ from other continents, indicating other potential factors at play.
 
 - **Other potential factors:** The data suggests that there may be additional factors influencing infection and death rates beyond population and wealth, prompting the need to explore correlations with other factors.
+
+<br>
 
 ## 5. Other possible correlated variables for COVID-19 rates
 Based on the questions above, this query attempts to identify the correlation value between infection rate and other variables.
