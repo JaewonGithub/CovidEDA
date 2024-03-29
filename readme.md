@@ -323,19 +323,19 @@ WHERE NOT
 ```
 | Correlation with Infection Rate | Value |
 |---------------------------------|-------|
-| GDP                             | 0.315 |
-| Age 65+ Population              | 0.303 |
-| Population Density              | 0.031 |
+| GDP                             |-0.751 |
+| Age 65+ Population              | 0.573 |
+| Population Density              | 0.638 |
 
 ### Breakdown:
 - **GDP Per Capita:** 
-The positive correlation value of 0.315 indicates a moderate positive association between a country's GDP per capita and its infection rate from COVID-19. This suggests that wealthier nations may experience slightly higher infection rates.
+The correlation coefficient of -0.751 indicates strong negative linear relationship between a country's GDP per capita and its infection rate from COVID-19. This suggests that wealthier nations experience significantly lower infection rates.
 
 - **Age 65+ Population:** 
-With a correlation value of 0.303, there appears to be a moderate positive correlation between the percentage of the population aged 65 and above and the infection rate. Countries with a higher proportion of older individuals tend to have slightly higher infection rates, highlighting potential vulnerabilities in older age groups.
+With a correlation coefficient of 0.573, there appears to be a moderate positive correlation between the percentage of the population aged 65 and above and the infection rate. Countries with a higher proportion of older individuals tend to have higher infection rates, highlighting potential vulnerabilities in older age groups.
 
 - **Population Density:** 
-The correlation value of 0.031 suggests that there is almost no correlation between population density and the infection rate of COVID-19. This implies that factors other than population density play a more significant role in determining the spread and impact of the virus.
+The correlation coefficient of 0.638 suggests that there is a significant positive linear relationship between population density and the infection rate of COVID-19, indicating that as population density increases, the infection rate of COVID-19 tends to also increase.
 
 - **Possibility Of Flaws:** This dataset is limited to reported countries which may not be very consistent with entire population dataset. The absence of data from certain countries can skew the correlation analysis. 
 
@@ -367,10 +367,10 @@ The correlation value of 0.031 suggests that there is almost no correlation betw
 &ensp; The analysis of the top 10 countries with the highest infection rates uncovers intriguing insights challenging common assumptions. Among these nations, Andorra, despite its wealth, surprisingly boasts the highest infection rate, defying expectations tied to economic prosperity and healthcare infrastructure during the pandemic. Moreover, unlike the USA's infection count versus death count, histogram analysis indicates a notable absence of a direct correlation between infection rates and death rates across these countries. This discrepancy suggests that a high infection rate is not necessarily the cause of a high death rate, or vice versa.
 
 ## Rates For Each Continent
-&ensp; The prevalence of COVID-19 in Europe, with its unexpectedly high infection rate, contrasts starkly with Africa's surprisingly low infection rate, challenging assumptions about the correlation between a country's wealth and its infection rates. Similarly, Oceania's relatively low infection rate can be partially attributed to its smaller population size. However, despite this advantage, the death rate in Oceania remains comparable to other continents, indicating that factors beyond population and wealth play significant roles in COVID-19 outcomes. These findings underscore the complexity of pandemic dynamics and the need to delve deeper into potential correlations with additional factors such as healthcare infrastructure, public health measures, demographics, and cultural practices. Understanding these nuances is crucial for formulating targeted strategies to mitigate COVID-19's impact and enhance global pandemic response efforts.
+&ensp; The prevalence of COVID-19 in Europe, with its unexpectedly high infection rate, contrasts starkly with Africa's surprisingly low infection rate, challenging results about the correlation between a country's wealth (GDP) and its infection rates. Similarly, Oceania's relatively low infection rate can be partially attributed to its lower population density. However, despite this advantage, the death rate in Oceania remains comparable to other continents, indicating that factors beyond population and wealth play significant roles in COVID-19 outcomes. These findings underscore the complexity of pandemic dynamics and the need to delve deeper into potential correlations with additional factors such as healthcare infrastructure, public health measures, demographics, and cultural practices. Understanding these nuances is crucial for formulating targeted strategies to mitigate COVID-19's impact and enhance global pandemic response efforts.
 
 ## Understanding Other Possible Variables
-&ensp; The analysis uncovers several interesting correlations between various factors and COVID-19 infection rates. A moderate positive correlation between GDP per capita and infection rates suggests that wealthier nations may experience slightly higher infection rates. Similarly, the moderate positive correlation between the percentage of the population aged 65 and above and infection rates indicates potential vulnerabilities in older age groups. Surprisingly, there is almost no correlation between population density and infection rates, implying that other factors play a more significant role in virus spread. However, it's essential to acknowledge potential flaws in the dataset, such as limited reporting from certain countries, which can skew correlation analyses.
+&ensp; The analysis uncovers several interesting correlations between various factors and COVID-19 infection rates. A strong negative correlation between GDP per capita and infection rates (-0.751) suggests that wealthier nations experience significantly lower infection rates. Similarly, the moderate positive correlation between the percentage of the population aged 65 and above and infection rates (0.573) indicates potential vulnerabilities in older age groups. Lastly, there is a significant positive linear relationship between population density and the infection rate of COVID-19 (correlation coefficient of 0.638). Although higher population density having association with higher infection rate is seen, it's essential to acknowledge that higher population density does not imply the causation. Furthermore, potential flaws in the dataset, such as limited reporting from certain countries, can skew correlation analyses.
 
 <br>
 <br>
